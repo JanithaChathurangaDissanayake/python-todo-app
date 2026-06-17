@@ -217,4 +217,10 @@ MIT — feel free to use for your own portfolio!
 
 ---
 
-> Built with ❤️ as a portfolio project. Star ⭐ this repo if it helped you!
+
+## Tech Stack
+
+- Python / Flask
+- Docker / Docker Hub
+- GitHub Actions (CI/CD)
+- GCP Compute Engine
