@@ -4,7 +4,7 @@
 # onto the main app. Blueprints keep code organized and allow you
 # to split a large app into multiple files.
 
-from flask import Blueprint, jsonify, request
+from flask import Blueprint, jsonify, request, render_template
 from app import db
 from app.models import Todo
 
@@ -12,6 +12,10 @@ from app.models import Todo
 # url_prefix means all routes here start with '/api'
 todo_bp = Blueprint('todo', __name__, url_prefix='/api')
 
+@todo_bp.route('/', methods=['GET'])
+def index():
+    """Serves the main HTML page."""
+    return render_template('index.html')
 
 @todo_bp.route('/health', methods=['GET'])
 def health_check():
